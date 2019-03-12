@@ -5,91 +5,83 @@ import org.testng.annotations.Test;
 /**
  * @author krzysztof.kramarz
  */
-@Test
-public class TestSum
+public class TestSubstraction
 {
-
-   // @BeforeSuite
-   // static
-   // {
-   //    Calculator calculator = new Calculator();
-   //
-   // }
    @Test
-   public void testSumPositive()
+   public void testsubstractPositive()
    {
       int firtsNumber = 1;
       int seconfNummber = 1;
-      String expect = "2";
-
-      Calculator calculator = new Calculator();
-      String result = calculator.sum(firtsNumber, seconfNummber);
-      assert (result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 2 ";
-   }
-
-   @Test
-   public void testSumPositive2()
-   {
-      int firtsNumber = -10;
-      int secondNummber = 10;
       String expect = "0";
 
       Calculator calculator = new Calculator();
-      String result = calculator.sum(firtsNumber, secondNummber);
+      String result = calculator.substract(firtsNumber, seconfNummber);
       assert (result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 2 ";
    }
 
    @Test
-   public void testSumPositive3()
+   public void testsubstractPositive2()
    {
       int firtsNumber = -10;
-      int secondNummber = -20;
-      String expect = "-30";
-
-      Calculator calculator = new Calculator();
-      String result = calculator.sum(firtsNumber, secondNummber);
-      assert (result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 2 ";
-   }
-
-   @Test
-   public void testSumPositive4()
-   {
-      int firtsNumber = -10;
-      int secondNummber = -10;
+      int secondNummber = 10;
       String expect = "-20";
 
       Calculator calculator = new Calculator();
-      String result = calculator.sum(firtsNumber, secondNummber);
+      String result = calculator.substract(firtsNumber, secondNummber);
       assert (result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 2 ";
    }
 
    @Test
-   public void testSumPositiveBigNumber()
+   public void testsubstractPositive3()
+   {
+      int firtsNumber = -10;
+      int secondNummber = -10;
+      String expect = "0";
+
+      Calculator calculator = new Calculator();
+      String result = calculator.substract(firtsNumber, secondNummber);
+      assert (result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 2 ";
+   }
+
+   @Test
+   public void testsubstractPositive4()
+   {
+      int firtsNumber = -10;
+      int secondNummber = 15;
+      String expect = "-25";
+
+      Calculator calculator = new Calculator();
+      String result = calculator.substract(firtsNumber, secondNummber);
+      assert (result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 2 ";
+   }
+
+   @Test
+   public void testsubstractPositiveBigNumber()
    {
       Integer firtsNumber = 2147483647;
-      Integer  secondNummber = 10;
+      Integer  secondNummber = -10;
       String expect = "2147483657";
 
       Calculator calculator = new Calculator();
-      String result = calculator.sum(firtsNumber, secondNummber);
+      String result = calculator.substract(firtsNumber, secondNummber);
       assert (result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 2 ";
    }
 
    @Test
-   public void testSumPositiveBigNumberMinus()
+   public void testsubstractPositiveBigNumberMinus()
    {
       Integer firtsNumber = -2147483648;
-      Integer  secondNummber = -10;
+      Integer  secondNummber = 10;
       String expect = "-2147483658";
 
       Calculator calculator = new Calculator();
-      String result = calculator.sum(firtsNumber, secondNummber);
+      String result = calculator.substract(firtsNumber, secondNummber);
       assert (result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 2 ";
    }
 
 
    @Test
-   public void testSumNull()
+   public void testsubstractNull()
    {
       Integer firtsNumber = null;
       Integer secondNummber = null;
@@ -98,7 +90,7 @@ public class TestSum
       Calculator calculator = new Calculator();
       try
       {
-         String result = calculator.sum(firtsNumber, secondNummber);
+         String result = calculator.substract(firtsNumber, secondNummber);
 
       }
       catch (IllegalArgumentException e)
@@ -109,31 +101,26 @@ public class TestSum
    }
 
    @Test
-   public void testSumNegative()
+   public void testsubstractNegative()
    {
       int firtsNumber = 1;
       int seconfNummber = 1;
       String expect = "3";
 
       Calculator calculator = new Calculator();
-      String result = calculator.sum(firtsNumber, seconfNummber);
+      String result = calculator.substract(firtsNumber, seconfNummber);
       assert (!result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 2 ";
    }
 
    @Test
-   public void testSumNegative2()
+   public void testsubstractNegative2()
    {
       int firtsNumber = 2147483647;
       int seconfNummber = 8888;
       String expect = "-21474836472147483647";
 
       Calculator calculator = new Calculator();
-      String result = calculator.sum(firtsNumber, seconfNummber);
+      String result = calculator.substract(firtsNumber, seconfNummber);
       assert (!result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 2 ";
    }
-
-
-
-
 }
-
