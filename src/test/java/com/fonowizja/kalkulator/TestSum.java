@@ -52,5 +52,17 @@ public class TestSum
       assert (result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 0 ";
    }
 
+   @Test
+   public void testSubstractionNegative()
+   {
+      int firtsNumber = 1;
+      int seconfNummber = 1;
+      String expect = "1";
+
+      Calculator calculator = new Calculator();
+      String result = calculator.substract(firtsNumber, seconfNummber);
+      assert (!result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 0 ";
+   }
+
 }
 
