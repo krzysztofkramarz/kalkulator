@@ -9,4 +9,9 @@ class Calculator
    {
       return String.valueOf( firtsNumber + seconfNummber);
    }
+
+   public String substract(int firtsNumber, int seconfNummber)
+   {
+      return null;
+   }
 }
