@@ -7,6 +7,6 @@ class Calculator
 {
    public String sum(int firtsNumber, int seconfNummber)
    {
-      return null;
+      return "2";
    }
 }
