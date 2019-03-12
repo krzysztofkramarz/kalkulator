@@ -39,5 +39,18 @@ public class TestSum
       String result = calculator.sum(firtsNumber, seconfNummber);
       assert (!result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 2 ";
    }
+
+   @Test
+   public void testSubstractionPositive()
+   {
+      int firtsNumber = 1;
+      int seconfNummber = 1;
+      String expect = "0";
+
+      Calculator calculator = new Calculator();
+      String result = calculator.substract(firtsNumber, seconfNummber);
+      assert (result.equals(expect)) : "wynik dodawania 1 + 1 powinien byc 0 ";
+   }
+
 }
 
