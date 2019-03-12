@@ -12,6 +12,6 @@ class Calculator
 
    public String substract(int firtsNumber, int seconfNummber)
    {
-      return null;
+      return String.valueOf( firtsNumber - seconfNummber);
    }
 }
